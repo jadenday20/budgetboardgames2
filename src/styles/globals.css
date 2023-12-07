@@ -28,9 +28,19 @@ main {
   min-height: calc(100vh - 112px - 114px)
 }
 
-h2 {
+h2,
+h3 {
   font-weight: bold;
+}
+
+h2 {
   margin: 1rem 0 1rem 0;
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+h3 {
+  margin: .75rem 0 .75rem 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }

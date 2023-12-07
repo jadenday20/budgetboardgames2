@@ -7,7 +7,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ href, LinkTitle }) => {
     return (
-        <Link href={href} className="bg-blue-600 text-white p-4 rounded-lg hover:bg-blue-500 duration-500 max-w-fit">
+        <Link href={href} className="bg-zinc-800 text-white p-4 pl-6 pr-6 rounded-lg hover:bg-blue-900 duration-500 max-w-fit mt-4 mb-4">
             {LinkTitle}
         </Link>
     );
