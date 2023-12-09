@@ -59,9 +59,9 @@ export default function Cart() {
                 )}
             </div>
             <div>
-                {/* Buttons for checkout and shopping more */}
-                <Button linkTitle="Checkout" href='/checkout' />
-                <Button linkTitle="Shop for More" href='/shop' />
+                <Button linkTitle="Checkout" href='/checkout' center />
+                <span className='w-96 h-px bg-slate-800 my-2 block mx-auto'></span>
+                <Button linkTitle="Shop for More" href='/shop' center />
             </div>
         </Layout>
     );

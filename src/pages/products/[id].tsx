@@ -78,10 +78,11 @@ export default function Page() {
                     <p>Players: {game.players}</p>
                     <p>Playtime: {game.playtime}</p>
                     <Button linkTitle="Add to Cart" onClickEvent={addToCart} href="/cart" />
-                    <Button linkTitle="Shop for More" href="/shop" />
                 </div>
 
             </FlexLayout>
+            <span className='w-96 h-px bg-slate-800 my-2 block mx-auto'></span>
+            <Button linkTitle="Shop for More" href="/shop" />
         </Layout>
     );
 }
