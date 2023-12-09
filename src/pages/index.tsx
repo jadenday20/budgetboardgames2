@@ -11,7 +11,7 @@ export default function Home() {
                 <FlexLayout>
                     <div className='flex flex-col max-w-xl'>
                         <h3>Great Board Games at a Great Price</h3>
-                        <p>Your favorite board games shouldn't cost an arm and a leg. Shop with us to get great games at the right price.</p>
+                        <p>Your favorite board games shouldn&apos;t cost an arm and a leg. Shop with us to get great games at the right price.</p>
                         <Button linkTitle="Browse Games" href='/shop/' />
                     </div>
                     <div>
