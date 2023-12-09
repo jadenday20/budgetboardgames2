@@ -5,23 +5,24 @@ interface ButtonProps {
     linkTitle: string;
     onClickEvent?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
     center?: boolean;
+    className?: string; // New prop for additional classNames
     children?: React.ReactNode;
 }
 
-const Button: React.FC<ButtonProps> = ({ href, linkTitle, onClickEvent, center }) => {
+const Button: React.FC<ButtonProps> = ({ href, linkTitle, onClickEvent, center, className }) => {
     const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         if (onClickEvent) {
             onClickEvent(event);
         }
     };
 
-    const buttonClasses = `bg-zinc-800 text-white p-4 pl-6 pr-6 rounded-lg hover:bg-blue-900 duration-500 max-w-fit my-2 block group-hover:bg-blue-900 ${center ? 'm-auto' : ''}`;
+    const buttonClasses = `bg-zinc-800 text-white p-4 pl-6 pr-6 rounded-lg hover:bg-blue-900 duration-500 max-w-fit my-2 block group-hover:bg-blue-900 ${center ? 'm-auto' : ''} ${className || ''}`;
 
     return (
         <a
             href={href}
             onClick={handleClick}
-            className={buttonClasses}
+            className={buttonClasses.trim()} // Trim to handle extra spaces
         >
             {linkTitle}
         </a>
