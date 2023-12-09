@@ -39,7 +39,11 @@ export default function Page() {
     }, [id]);
 
     if (!game) {
-        return <Layout headingTitle="Loading..." children={undefined} />;
+        return (
+            <Layout headingTitle="Loading...">
+                <p>Everything should be ready to go in just a minute.</p>
+            </Layout>
+        );
     }
 
     const addToCart = () => {
