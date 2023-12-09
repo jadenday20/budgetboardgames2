@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Ticket to Ride",
+        "age": "8+",
+        "players": "2-5",
+        "playtime": "30-60 minutes",
+        "price": 39,
+        "condition": "Lightly-Used",
+        "imagePath": "ticket-to-ride.JPEG"
+    },
+    {
+        "name": "Uno",
+        "age": "7+",
+        "players": "2-10",
+        "playtime": "5-10 minutes",
+        "price": 5,
+        "condition": "Lightly-Used",
+        "imagePath": "uno.png"
+    },
+    {
+        "name": "Scrabble",
+        "age": "8+",
+        "players": "2-4",
+        "playtime": "50-60 minutes",
+        "price": 9,
+        "condition": "New",
+        "imagePath": "scrabble.png"
+    },
+    {
+        "name": "Dominion",
+        "age": "13+",
+        "players": "2-4",
+        "playtime": "30 minutes",
+        "price": 28,
+        "condition": "Used",
+        "imagePath": "dominion.png"
+    },
+    {
+        "name": "Apples to Apples",
+        "age": "12+",
+        "players": "4-10",
+        "playtime": "30-75 minutes",
+        "price": 20,
+        "condition": "Lightly-Used",
+        "imagePath": "apples-to-apples.JPEG"
+    },
+    {
+        "name": "Star Wars Chess",
+        "age": "6+",
+        "players": "2",
+        "playtime": "10-60 minutes",
+        "price": 20,
+        "condition": "Used",
+        "imagePath": "star-wars-chess.png"
+    }
+]

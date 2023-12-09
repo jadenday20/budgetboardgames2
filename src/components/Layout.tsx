@@ -9,14 +9,14 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children, headingTitle }) => {
     return (
-        <body className='min-h-screen'>
+        <div className='min-h-screen'>
             <Header />
-            <main className="flex flex-col items-center justify-between p-8">
+            <main className="flex flex-col items-center p-8">
                 <h2>{headingTitle}</h2>
                 {children}
             </main>
             <Footer />
-        </body>
+        </div>
     );
 };
 

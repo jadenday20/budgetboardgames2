@@ -26,7 +26,9 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "src/mongo/index.js",
+    "src/pages/api/games/index.js"
   ],
   "exclude": [
     "node_modules"

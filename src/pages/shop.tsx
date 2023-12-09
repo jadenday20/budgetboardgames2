@@ -8,7 +8,7 @@ export default function Shop() {
         <>
             <Layout headingTitle='Shop'>
                 <FlexLayout>
-                    <ProductCategories />
+                    {/* <ProductCategories /> */}
                     <div className="flex flex-col items-center justify-between flex-1">
                         <ProductList />
                     </div>
