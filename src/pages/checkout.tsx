@@ -55,7 +55,6 @@ export default function Checkout() {
                         <h3>Billing Information</h3>
                         <label htmlFor="customerFName" className='my-2 block'>First Name: <input type="text" name="customerFName" id="customerFName" className='py-1 px-2 w-full' /></label>
                         <label htmlFor="customerLName" className='my-2 block'>Last Name: <input type="text" name="customerLName" id="customerLName" className='py-1 px-2 w-full' /></label>
-                        <label htmlFor="CompanyName" className='my-2 block'>Company name (optional): <input type="text" name="CompanyName" id="CompanyName" className='py-1 px-2 w-full' /></label>
                         <label htmlFor="Country" className='my-2 block'>Country / Region: <select id="country" name="country" className='py-1 px-2 w-full' >
                             <option value="AF">Afghanistan</option>
                             <option value="AL">Albania</option>
