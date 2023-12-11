@@ -25,7 +25,25 @@ body {
 
 main {
   padding: 1em;
-  min-height: calc(100vh - 112px - 114px)
+  min-height: calc(100vh - 396px - 114px)
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    min-height: calc(100vh - 168px - 114px)
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    min-height: calc(100vh - 124px - 114px)
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  main {
+    min-height: calc(100vh - 112px - 114px)
+  }
 }
 
 h2,

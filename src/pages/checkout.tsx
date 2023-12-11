@@ -1,4 +1,4 @@
-import { useState, useEffect, ReactNode } from 'react';
+import React, { useState, useEffect, ReactNode, FormEvent } from 'react';
 import Layout from '@/components/Layout';
 import Button from '@/components/Button';
 import formatPrice from '@/components/FormatPrice';
@@ -10,6 +10,22 @@ interface CartItem {
     // Define the structure of your cart item
     price: number;
     // other properties if any
+}
+
+interface FormData {
+    customerPhone: string;
+    customerEmail: string;
+    customerFName: string;
+    customerLName: string;
+    country: string;
+    StreetAddress: string;
+    StreetAddress2: string;
+    City: string;
+    State: string;
+    Zip: string;
+    CardNum: string;
+    Expiration: string;
+    CVC: string;
 }
 
 export default function Checkout() {
@@ -43,10 +59,50 @@ export default function Checkout() {
     const year = d.getFullYear();
     const yearFinalDigits = year % 100;
 
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        const formData = new FormData(event.currentTarget);
+
+        const data: FormData = {
+            customerPhone: formData.get('customerPhone') as string,
+            customerEmail: formData.get('customerEmail') as string,
+            customerFName: formData.get('customerFName') as string,
+            customerLName: formData.get('customerLName') as string,
+            country: formData.get('country') as string,
+            StreetAddress: formData.get('StreetAddress') as string,
+            StreetAddress2: formData.get('StreetAddress2') as string,
+            City: formData.get('City') as string,
+            State: formData.get('State') as string,
+            Zip: formData.get('Zip') as string,
+            CardNum: formData.get('CardNum') as string,
+            Expiration: formData.get('Expiration') as string,
+            CVC: formData.get('CVC') as string
+        };
+
+        try {
+            const response = await fetch('/api/orders', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                // Handle success
+            } else {
+                // Handle errors
+            }
+        } catch (error) {
+            // Handle network errors
+        }
+    };
+
     return (
         <>
             <Layout headingTitle='Checkout'>
-                <form action="" className='max-w-md w-full text-xl'>
+                <form action="" className='max-w-md w-full text-xl' onSubmit={handleSubmit}>
                     <fieldset className='rounded p-3 border-gray-600 border-2 w-full my-2'>
                         <h3>Your Cart:</h3>
                         <ul>
@@ -332,7 +388,8 @@ export default function Checkout() {
                             <div className='flex flex-col'><label htmlFor="CVC" className='my-2 block'>CVC: <input required type="num]" maxLength={3} name="CVC" id="CVC" className='py-1 px-2 w-full' pattern="[0-9]{3}" title="Enter a date in this format 123" placeholder='123' /></label></div>
                         </div>
                     </fieldset>
-                    <FormSubmit linkTitle={'Submit Order'} center></FormSubmit>
+                    <FormSubmit linkTitle="Submit Order" type="submit" center />
+                    {/* <FormSubmit linkTitle={'Submit Order'} center></FormSubmit> */}
                 </form>
                 <span className='w-96 h-px bg-slate-800 my-2 block mx-auto'></span>
                 <Button linkTitle="Shop for More" href='/shop' />
