@@ -388,7 +388,7 @@ export default function Checkout() {
                             <div className='flex flex-col'><label htmlFor="CVC" className='my-2 block'>CVC: <input required type="num]" maxLength={3} name="CVC" id="CVC" className='py-1 px-2 w-full' pattern="[0-9]{3}" title="Enter a date in this format 123" placeholder='123' /></label></div>
                         </div>
                     </fieldset>
-                    <FormSubmit linkTitle="Submit Order" type="submit" center />
+                    <FormSubmit linkTitle="Submit Order" center />
                     {/* <FormSubmit linkTitle={'Submit Order'} center></FormSubmit> */}
                 </form>
                 <span className='w-96 h-px bg-slate-800 my-2 block mx-auto'></span>
